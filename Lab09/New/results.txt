@@ -1,0 +1,20 @@
+1) new allocates the memory for that data type so it must return the address of the type through a void pointer. delete needs a pointer to an address. 
+2)Line 1: calls global new operator because p is not of class Foo
+  Line 2: calls Foo class new operator because q is of class Foo
+  Line 3: calls Foo class new operator because r is of class Foo
+  Line 4: calls gobal delete operator because p is not of class Foo
+  Line 5: calls Foo class delete operator because q is of class Foo
+  Line 6: calls Foo class delete operator because r is of class Foo
+  Line 7: main returns 0 if successfully completed code
+new and delete are static so that they can only access static data members. To allocate memory for a function, the function must remain inside of the allocated memory. This must be static and not exceed it's given memory allocation. Being static also allows for class scope and to be called without an instance of Foo. 
+3)Since new and delete are private, onlhy Foo can use these methods. Since we are in main, new is out of context, causing an error. 
+4)The new and delete operator is deleted for any instance of Foo
+5)Foo can delcare and use a NoNewDelete ctor and dtor, but can't reference or use in main. 
+6)Use a shared_ptr that will check if it has multiple owners. It will only delete if the last owner deletes it.
+7)byte xFF would be the best. it has potential for out-of-bounds. It isn't a value in ASCII. It also clears all bits so that no information is left over. 
+8)Foo is 8 bytes. the difference between p and q is x20 which is allowcating 32 bytes of data. the global new is giving the function overhead and allowcating additional memory. 
+Bar is 8 bytes. r and s are x08 apart, givng 8 bytes of memory. This is due to giving only exactly the amount Bar needed at compile time. 
+9)Bar will use the new and delete from Foo if they are protected or public. It will be inherited. No. Modify the Foo new and delete to account for this, or private the Foo new and delete to force Bar to use the Bar new and delete
+10)almost 4:1 because normal.cc allocates 4 time the memory pool.cc does, which takes 4 times the amount of time.
+11)almost 4:1 becuase normal.cc allocates 4 time the memory pool.cc does.
+

@@ -1,0 +1,37 @@
+#! /bin/bash
+
+old_suffix=$1
+new_suffix=$2
+
+if (( $# == 0))
+then 
+	echo "No argument given. Please give two arguments." >&2
+	exit 1
+elif (( $# == 1))
+then
+	echo "Please give two arguments instead of one." >&2
+	exit 1
+elif (( $# >= 3))
+then
+	echo "Too many arguments! Please give only two arguments." >&2
+	exit 1
+else
+	for f in *.$old_suffix
+	do
+		new_name=${f%.*}.$new_suffix
+		if [[ -e $new_name ]]
+		then
+			echo "Can't rename file $f, $new_name already exists." >&2
+			exit 1
+		elif mv $f $new_name
+		then 
+			echo Rename $f to $new_name
+		else 
+			echo "Failed to rename $f." >&2
+			exit 1
+		fi
+		
+	done
+fi
+
+

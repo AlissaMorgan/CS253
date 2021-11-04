@@ -1,0 +1,19 @@
+exp1: delete[] not called
+
+exp2: delete[] not called and called array outside of array bounds(undefined behavior)
+
+exp3: conditionals based on uninitalized variable
+
+exp4: jump to function with an unitialized variable as a function parameter
+
+exp5: array called out of bounds, exceeding program memory boundaries
+
+exp6: deleted array then tried to call array
+
+exp7: used delete(for single item) instead of delete[]
+
+exp8: called new[] without calling delete[] to free memory
+
+exp9: pointer to array was moved
+
+exp10: an unsigned int variable equaled a signed value

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/s/bach/l/under/alissaam/cs253/HW2/testdir/Phobic.cc
+Phobic.h
+/s/bach/l/under/alissaam/cs253/HW2/testdir/Phobic.h
+cctype
+-
+
+/s/bach/l/under/alissaam/cs253/HW2/testdir/Phobic.h
+iostream
+-
+set
+-
+
