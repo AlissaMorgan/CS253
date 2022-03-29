@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/s/bach/l/under/alissaam/cs253/HW5/main.cc
+unistd.h
+-
+stdlib.h
+-
+stdio.h
+-
+iostream
+-
+string
+-
+string.h
+-
+fstream
+-
+sstream
+-
+

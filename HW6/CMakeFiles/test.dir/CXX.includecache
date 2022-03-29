@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/s/bach/l/under/alissaam/cs253/HW6/Oval.h
+functional
+-
+iostream
+-
+vector
+-
+algorithm
+-
+iterator
+-
+
+/s/bach/l/under/alissaam/cs253/HW6/test.cc
+Oval.h
+/s/bach/l/under/alissaam/cs253/HW6/Oval.h
+Oval.h
+/s/bach/l/under/alissaam/cs253/HW6/Oval.h
+cassert
+-
+iostream
+-
+sstream
+-
+string
+-
+
