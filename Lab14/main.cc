@@ -35,11 +35,4 @@ int main() {
 		hsd.insert(s);
     	hsd.dump();
 	
-	/*hset<int> hsi;
-	hsi.insert(1);
-	hsi.dump();
-	for (auto v : hsi)
-	cout << ' ' << v;
-    cout << '\n';*/
-	
 }
